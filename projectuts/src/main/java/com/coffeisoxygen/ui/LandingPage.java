@@ -6,7 +6,6 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.Image;
-import java.util.Map;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -14,6 +13,10 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+
+import com.coffeisoxygen.ui.mapeditor.PageCreateCustomMap;
+import com.coffeisoxygen.ui.maploader.PageLoadSavedMap;
+import com.coffeisoxygen.ui.maploader.PageLoadSystemMap;
 
 public class LandingPage {
     public static void start() {
@@ -47,15 +50,15 @@ public class LandingPage {
         // Buttons
         JButton createMapButton = createButton("Create Map", e -> {
             frame.dispose();
-            MapCreatorPage.start();
+            PageCreateCustomMap.start();
         });
         JButton loadMapButton = createButton("Load Map", e -> {
             frame.dispose();
-            MapLoaderPage.start();
+            PageLoadSavedMap.start();
         });
         JButton systemMapButton = createButton("System Map", e -> {
             frame.dispose();
-            MapSytemPage.start();
+            PageLoadSystemMap.start();
         });
         JButton exitButton = createButton("Exit", e -> System.exit(0));
 
