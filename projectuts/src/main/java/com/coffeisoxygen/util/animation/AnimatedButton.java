@@ -11,7 +11,6 @@ import javax.swing.JButton;
 import javax.swing.SwingConstants;
 
 public class AnimatedButton extends JButton {
-    
     private static final Color HOVER_COLOR = new Color(41, 128, 185);
     private static final Color DEFAULT_COLOR = new Color(52, 73, 94);
     private static final Color TEXT_COLOR = Color.WHITE;
