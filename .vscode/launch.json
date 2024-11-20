@@ -2,6 +2,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "LandingPageLayout",
+      "request": "launch",
+      "mainClass": "com.coffeisoxygen.ui.LandingPageLayout",
+      "projectName": "projectuts"
+    },
+    {
+      "type": "java",
+      "name": "LandingPageUI",
+      "request": "launch",
+      "mainClass": "com.coffeisoxygen.ui.LandingPageUI",
+      "projectName": "projectuts"
+    },
+    {
+      "type": "java",
       "name": "LPageUI",
       "request": "launch",
       "mainClass": "com.coffeisoxygen.ui.LPageUI",
