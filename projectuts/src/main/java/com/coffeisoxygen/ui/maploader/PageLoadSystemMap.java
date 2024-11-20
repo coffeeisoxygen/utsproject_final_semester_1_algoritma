@@ -1,12 +1,16 @@
 package com.coffeisoxygen.ui.maploader;
 
 import java.awt.BorderLayout;
-
+import java.awt.Color;
+import java.awt.GridLayout;
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
-
 import com.coffeisoxygen.model.board.Board;
+import com.coffeisoxygen.model.board.Tilemodel;
+import com.coffeisoxygen.model.board.provider.MapManager;
 import com.coffeisoxygen.model.board.provider.SystemMapProvider;
 import com.coffeisoxygen.ui.LandingPage;
 import com.coffeisoxygen.ui.MapGame;
@@ -18,9 +22,9 @@ public class PageLoadSystemMap {
         frame.setSize(800, 600);
         frame.setLayout(new BorderLayout());
 
-        SystemMapProvider systemMapProvider = new SystemMapProvider();
-        Board board = systemMapProvider.loadMap();
-        // Display the board (implement displayBoard method)
+        MapManager mapManager = new MapManager(new SystemMapProvider());
+        Board board = mapManager.loadMap();
+        // Display the board
         JPanel boardPanel = displayBoard(board);
         frame.add(boardPanel, BorderLayout.CENTER);
 
@@ -28,8 +32,10 @@ public class PageLoadSystemMap {
         JPanel buttonPanel = new JPanel();
         JButton startButton = new JButton("Start Game");
         JButton backButton = new JButton("Back to Menu");
+        JButton resetButton = new JButton("Reset Map");
         buttonPanel.add(startButton);
         buttonPanel.add(backButton);
+        buttonPanel.add(resetButton);
         frame.add(buttonPanel, BorderLayout.SOUTH);
 
         startButton.addActionListener(e -> {
@@ -42,13 +48,27 @@ public class PageLoadSystemMap {
             LandingPage.start();
         });
 
+        resetButton.addActionListener(e -> {
+            Board resetBoard = mapManager.resetMap();
+            frame.remove(boardPanel);
+            JPanel newBoardPanel = displayBoard(resetBoard);
+            frame.add(newBoardPanel, BorderLayout.CENTER);
+            frame.revalidate();
+            frame.repaint();
+        });
+
         frame.setVisible(true);
     }
 
-    private static JPanel displayBoard(Board board) {
-        // Implement the method to display the board
-        JPanel panel = new JPanel();
-        // Add components to display the board
+    public static JPanel displayBoard(Board board) {
+        JPanel panel = new JPanel(new GridLayout(6, 12)); // Assuming a 12x6 grid for the board
+        for (Tilemodel tile : board.getTiles().values()) {
+            JPanel tilePanel = new JPanel();
+            tilePanel.setBackground(tile.getColor());
+            tilePanel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+            tilePanel.add(new JLabel(tile.getName()));
+            panel.add(tilePanel);
+        }
         return panel;
     }
 }

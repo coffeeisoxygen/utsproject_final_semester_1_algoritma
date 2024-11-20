@@ -1,4 +1,4 @@
-package com.coffeisoxygen.ui.animation;
+package com.coffeisoxygen.util.animation;
 
 import java.awt.Color;
 import java.awt.Font;
