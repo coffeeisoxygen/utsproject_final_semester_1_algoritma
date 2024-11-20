@@ -1,0 +1,32 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "LPageUI",
+      "request": "launch",
+      "mainClass": "com.coffeisoxygen.ui.LPageUI",
+      "projectName": "projectuts"
+    },
+    {
+      "type": "java",
+      "name": "BoardTestUI",
+      "request": "launch",
+      "mainClass": "com.coffeisoxygen.ui.BoardTestUI",
+      "projectName": "projectuts"
+    },
+    {
+      "type": "java",
+      "name": "TileModelUI",
+      "request": "launch",
+      "mainClass": "com.coffeisoxygen.ui.TileModelUI",
+      "projectName": "projectuts"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Launch App",
+      "mainClass": "com.coffeisoxygen.App",
+      "projectName": "projectuts"
+    }
+  ]
+}

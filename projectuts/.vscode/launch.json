@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Launch App",
+      "mainClass": "com.coffeisoxygen.App",
+      "projectName": "projectuts",
+      "args": "",
+      "vmArgs": "",
+      "modulePaths": [],
+      "classPaths": [],
+      "sourcePaths": [],
+      "encoding": "UTF-8",
+      "cwd": "${workspaceFolder}",
+      "env": {},
+      "envFile": "",
+      "stopOnEntry": false,
+      "console": "internalConsole",
+      "shortenCommandLine": "auto",
+      "stepFilters": {}
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+com\coffeisoxygen\ui\animation\AnimatedButton$1.class
+com\coffeisoxygen\model\board\provider\MapProvider.class
+com\coffeisoxygen\model\board\provider\MapManager.class
+com\coffeisoxygen\model\board\TileCategory.class
+com\coffeisoxygen\App.class
+com\coffeisoxygen\model\board\provider\NewMapProvider.class
+com\coffeisoxygen\model\board\factory\TileFactory.class
+com\coffeisoxygen\ui\animation\AnimatedButton.class
+com\coffeisoxygen\model\board\provider\UserMapProvider.class
+com\coffeisoxygen\model\board\provider\SystemMapProvider.class
+com\coffeisoxygen\ui\LPageUI.class
+com\coffeisoxygen\util\Coordinate.class
+com\coffeisoxygen\model\board\Board.class
+com\coffeisoxygen\model\board\Tilemodel.class
