@@ -1,12 +1,12 @@
 package com.coffeisoxygen.ui;
 
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.Image;
+import java.util.Map;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -47,15 +47,15 @@ public class LandingPage {
         // Buttons
         JButton createMapButton = createButton("Create Map", e -> {
             frame.dispose();
-            // CreateMapPage.start();
+            MapCreatorPage.start();
         });
         JButton loadMapButton = createButton("Load Map", e -> {
             frame.dispose();
-            // LoadMapPage.start();
+            MapLoaderPage.start();
         });
         JButton systemMapButton = createButton("System Map", e -> {
             frame.dispose();
-            // SystemMapPage.start();
+            MapSytemPage.start();
         });
         JButton exitButton = createButton("Exit", e -> System.exit(0));
 
